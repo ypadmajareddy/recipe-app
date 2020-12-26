@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom';
 import backIcon from "../../images/back-arrow.png";
-import { mockData } from "../../App";
+import { mockData } from "../../mockData";
 
-export default function RecipeDetails(props) {
+export default function RecipeDetails() {
     const { id } = useParams();    
     const [data, setdata] = useState("");
     useEffect(() => {
@@ -20,14 +20,14 @@ export default function RecipeDetails(props) {
                     </div>
                     <div className="ing-content">
                         <img src={data.rImg} alt="" className="recipe-img"></img>
-                        <span><i class="fas fa-fire"></i> {data.cals}</span>
-                        <div className="pq-content">
-                        {/* <span className="price">₹{data.price}</span> */}
+                        <span><i class="fas fa-fire"></i> {data.cals}</span>                       
                     </div>
-                    </div>
-                    <div className="description">
+                    <div className="instructions">
                         <h4>Recipe Instrcutions:</h4>
-                        <p>{data.recipe}</p>
+                        <p>{data.recipeInstructions.map((item,i)=>(
+                            <div><h4>Step {i+1} {item.title}</h4>
+                            <div>{item.desc}</div></div>
+                        ))}</p>
                     </div>
                 </div> : "something went wrong"}
             </div>

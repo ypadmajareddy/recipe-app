@@ -3,15 +3,17 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: #fff;
+    color: #fff;    
+}
+#root {
+    overflow: auto;
 }
 .App {
-    text-align: center;
-    display: flex;
-    overflow-x: auto;
+    /* text-align: center; */
+    display: flex;    
 }
 body{
-    overflow: hidden;
+    overflow: auto;
     color: #fff;
     background-color: #2F333C;
 }
@@ -56,7 +58,7 @@ section {
     height: 100px;
     margin: 10px;
 }
-.pq-content{
+/* .pq-content{
     margin-top: 10px;
     position: relative;
 }
@@ -66,7 +68,7 @@ section {
     padding: 5px 20px 5px 20px;
     border-radius: 20px;
     cursor: pointer;
-}
+} */
 h4{
     font-weight: 400;
     font-size: 14px;
@@ -75,9 +77,18 @@ h4{
 .description{
     padding: 0 20px 5px 20px;
     margin-top: 15px;
-    
+    text-align: center;    
 }
 .description p{
+    font-size: 11px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+.instructions{
+    padding: 0 20px 5px 20px;
+    margin-top: 15px;       
+}
+.instructions p{
     font-size: 11px;
     font-weight: 300;
     margin-top: 5px;

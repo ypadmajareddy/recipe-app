@@ -1,5 +1,5 @@
 import React from 'react'
-import {mockData} from "../../App";
+import {mockData} from "../../mockData";
 import RecipeCard from "../recipeCard/recipeCard"
 export default function dashboard() {
     return (
